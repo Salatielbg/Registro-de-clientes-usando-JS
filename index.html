@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <div>
+        <form method="post" action="processa.php" onsubmit="return valida()">
+            <input type="text" placeholder="Nome Completo" id="nome" name="nome" size="50">
+            <br>
+            <input type="email" placeholder="E-mail" id="email" name="email" size="50">
+            <br>
+            <input type="text" placeholder="CPF" id="cpf" name="cpf" size="50" maxlength="11" onblur="mascaraCPF(this)">
+            <br>
+            <input type="tel" placeholder="Telefone celular" id="fone" name="fone" size="50" oninput="mascaraFone(this)">
+            <br>
+            <input type="text" placeholder="CEP" id="cep" name="cep" size="50" onblur="mascaraCEP(this)">
+            <br>
+            <input type="date" placeholder="Data de Nascimento" id="nacto" name="nacto" size="50">
+            <br>
+            <input type="reset" value="Cancelar"> 
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+</body>
+
+</html>
